@@ -1,27 +1,20 @@
 class Repository
+  attr_reader :database
 
-  @@database = []
-
+  def initialize
+    @database = []
+  end
+  
   def add(student)
-    @@database.push(student)
+    database.push(student)
   end
 
   def show
-    @@database.each do |x|
-      puts x
-    end
+    database.each { |x| puts x }
   end
 
-  def search(userInput)
-
-    @@database.each do |item|
-
-      if item.registration == userInput
-        return item
-      end
-
-    end
-
+  def search(user_input)
+    @database.detect {|item| item.registration == user_input}
   end
 
 

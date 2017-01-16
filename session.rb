@@ -7,10 +7,17 @@ class Session
 
   def init(db)
 
-    puts "Digite sua matrícula: "
-    registration = gets.chomp
-    student = db.search(registration)
-    student.verify_status
+    while true
+      puts "Digite sua matrícula: "
+      registration = gets.chomp
+      student = db.search(registration)
+      if student
+        student.verify_status
+      else
+        puts "Matricula inexistente \n"
+      end
+
+    end
 
   end
 

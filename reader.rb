@@ -6,7 +6,7 @@ require_relative 'student'
 class Reader
 
 
-  def readFile
+  def read_file
 
     #puts "Nome do arquivo: "
     #filename = gets.chomp
