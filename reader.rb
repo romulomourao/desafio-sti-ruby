@@ -26,6 +26,3 @@ class Reader
   end
 
 end
-
-
-#https://www.sitepoint.com/guide-ruby-csv-library-part/
