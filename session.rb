@@ -1,18 +1,17 @@
 require_relative 'repository'
+
 class Session
+
+  ACTIVE = "ATIVO"
+  INACTIVE = "INATIVO"
 
   def init(db)
 
     puts "Digite sua matrícula: "
     registration = gets.chomp
-    puts registration
     student = db.search(registration)
-    options(student)
+    student.verify_status
 
-  end
-
-  def options(student)
-    puts "Olá, " + student.name
   end
 
 end

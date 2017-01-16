@@ -12,7 +12,7 @@ class Repository
     end
   end
 
-  def search2(userInput)
+  def search(userInput)
 
     @@database.each do |item|
 
